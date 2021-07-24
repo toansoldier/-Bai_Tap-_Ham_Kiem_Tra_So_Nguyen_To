@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ham kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let check = 2;
+        let count = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (check == count) {
+            return number + " la so nguyen to";
+        } else {
+            return number + " ko phai la so nguyen to";
+        }
+    }
+
+    let n = "run";
+    while (n == "run") {
+        let inputNum = prompt("nhap vao mot so de kiem tra so nguyen to - Nhap 'exit' de thoat");
+        let result = isPrime(inputNum);
+        if (inputNum == "exit") {
+            break;
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
